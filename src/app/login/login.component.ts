@@ -58,6 +58,8 @@ export class LoginComponent implements OnInit {
     this.service.insert(this.userDTO).toPromise();    // .subscribe(us => us);
 
     alert(`Thank you for registering, ${userDTO.username}`);
+
+    this.userChoice = 'loginUser';
   }
 
   showForm(formToShow: string) {
