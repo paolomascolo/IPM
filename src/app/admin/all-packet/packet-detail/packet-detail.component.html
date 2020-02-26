@@ -1,0 +1,6 @@
+<div class="detail-container">
+  <input class="packet-title" [(ngModel)]="packet.name" (keydown)="updateOnEnter($event, packet)">
+  <textarea class="packet-descarea" [(ngModel)]="packet.description" (keydown)="updateOnEnter($event, packet)">
+      
+  </textarea>
+</div>

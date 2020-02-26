@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserDTO } from 'src/dto/userdto';
+import { SearchService } from 'src/app/service/search.service';
 
 /**
  * Questa component è statica eccetto per il display dell'utente loggato (viene estratto dalla session
@@ -17,11 +18,15 @@ import { UserDTO } from 'src/dto/userdto';
 export class HeaderComponent implements OnInit {
 
   user: UserDTO = new UserDTO;
-
-  constructor() { }
+  
+  constructor(private search : SearchService) { }
 
   ngOnInit() {
     this.user = JSON.parse(localStorage.getItem('currentUser'));
+  }
+
+  send(event : any){
+    this.search.query = event.target.value;
   }
 
 }

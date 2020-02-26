@@ -1,0 +1,50 @@
+.inner-packet-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid #FFCC00;
+
+    font-size: 3rem;
+
+    width: 100%;
+    margin: 1rem;
+
+    cursor: pointer;
+
+    border-radius: 25px;
+    transition: background-color 1s;
+
+}
+
+.inner-packet-container:hover {
+    background-color: #FFCC00;
+}
+
+.inner-packet-container:hover .packet-logo {
+    color: orange;
+}
+
+.inner-packet-container:hover .packet-pars {
+    color: orange;
+}
+
+.packet-logo {
+    font-size: 10rem;
+    color: #FFCC00;
+    font-size: 6rem;
+
+    transition: color 1s;
+}
+
+.packet-pars {
+    padding: 2rem;
+    text-align: center;
+    width: 20%;
+
+    color: #FFCC00;
+
+    transition: color 1s;
+}

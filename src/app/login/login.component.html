@@ -1,6 +1,6 @@
 <!-- Il grid layout di Bootstrap prevede che il contentuto sia inserito dentro un div di classe 
   "container", poi le row e infine le col (in tutto devono essere ESATTAMENTE 12 colonne per 
-  ogni riga) -->
+  ogni riga) 
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-7">
@@ -15,11 +15,46 @@
         <div class="form-group">
           <input class="form-control" type="password" id="pass" name="password" placeholder="Password" ngModel>
         </div>
-        <!-- "(click)"" è un tipo di binding unidirezionale (dal template al ts): quando l'utente clicca
+         "(click)"" è un tipo di binding unidirezionale (dal template al ts): quando l'utente clicca
         sul bottone viene eseguito il metodo login(f) del ts. f non è altro che la form con tutti i valori
-      inseriti (verranno poi spacchettati dal ts) -->
+      inseriti (verranno poi spacchettati dal ts) 
         <button type="submit" (click)="login(f)">Login</button>
         <button type="submit">Sign Up</button>
+      </form>
+    </div>
+  </div>
+</div>
+-->
+<div class="outer-login-container">
+  <div class="row">
+    <div class="col-md-2 mx-auto text-center p-4">
+      <img src="../../assets/ipmlogo.svg" alt="ipm logo" class="img-fluid">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4 mx-auto text-center">
+      <i class="fas fa-user-plus fa-5x p-4"></i>
+      <i class="fas fa-user fa-5x p-4"></i>
+      <i class="fab fa-facebook fa-5x p-4"></i>
+      <i class="fab fa-google-plus fa-5x p-4"></i>
+      <i class="fab fa-instagram fa-5x p-4"></i>
+    </div>
+  </div>
+  <!-- Form -->
+  <div class="row">
+    <div class="col-md-3 mx-auto text-center">
+      <form #f="ngForm">
+
+        <div class="form-group">
+          <input class="form-control text-center roundedCorner" type="text" id="user" name="username" placeholder="Username" ngModel>
+        </div>
+
+        <div class="form-group">
+          <input class="form-control text-center roundedCorner" type="password" id="pass" name="password" placeholder="Password" ngModel>
+        </div>
+
+        <button class="" type="submit" (click)="login(f)">Login</button>
+
       </form>
     </div>
   </div>

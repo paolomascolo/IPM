@@ -1,0 +1,13 @@
+.all-packet-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+
+/* .selected {
+    background-color: #FFCC00;
+    margin: 1rem;
+    border-radius: 25px;
+}
+*/

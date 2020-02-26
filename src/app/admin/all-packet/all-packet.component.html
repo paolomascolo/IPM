@@ -1,0 +1,18 @@
+<div class="all-packet-container">
+  <ul style="list-style: none; width: 50%;">
+    <li *ngFor="let packet of packets" [class.selected]="packet === selectedPacket" (click)="onSelect(packet)">
+      <app-packet
+        [name]="packet.name"
+        ></app-packet>
+    </li>
+  </ul>
+
+  <app-packet-detail 
+    *ngIf="selectedPacket"
+    [name]="selectedPacket.name"
+    [description]="selectedPacket.description"
+    [packet]="selectedPacket"
+    style="width: 50%;"
+  >
+  </app-packet-detail>
+</div>

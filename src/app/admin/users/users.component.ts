@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/service/user.service';
 import { UserDTO } from 'src/dto/userdto';
 import { AbstractCrudComponent } from 'src/app/utils/abstractcomponent';
+import { SearchService } from 'src/app/service/search.service';
 
 /**
  * Come ogni componente di CRUD, questa estende la classe AbstractCrudComponent, ereditando tutti i metodi 
@@ -19,7 +20,7 @@ import { AbstractCrudComponent } from 'src/app/utils/abstractcomponent';
 })
 export class UsersComponent extends AbstractCrudComponent<UserDTO> implements OnInit {
 
-  constructor(service: UserService) {
+  constructor(service: UserService, filter : SearchService) {
     super(service);
   }
 
