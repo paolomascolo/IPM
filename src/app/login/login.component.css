@@ -28,3 +28,38 @@ svg:hover {
 .selected {
     color: white;
 }
+
+.outer-login-container{
+    min-height: 100vh;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 30%, rgba(255,207,15,1) 30%, rgba(255,204,0,1) 100%);
+    overflow: hidden;
+}
+
+svg:hover{
+    cursor: pointer;
+}
+
+.roundedCorner {
+    border-radius: 25px;
+}
+
+@media screen and (min-width: 890px) {
+    .triangle{
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 7vw 7vw 0 7vw;
+        border-color: #ffffff transparent transparent transparent;
+    }
+}
+
+@media screen and (max-width: 890px) {
+    .triangle{
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 30vw 30vw 0 30vw;
+        border-color: #ffffff transparent transparent transparent;
+    }
+}

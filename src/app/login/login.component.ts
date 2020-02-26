@@ -13,6 +13,8 @@ export class LoginComponent implements OnInit {
 
   loginDTO: LoginDTO;
 
+  userChoice: string = 'loginUser';
+
   constructor(private service: UserService, private router: Router) { }
 
   ngOnInit() {
@@ -41,4 +43,9 @@ export class LoginComponent implements OnInit {
       }
     });
   }
+
+  showForm(formToShow: string) {
+    this.userChoice = formToShow;
+  }
+
 }
