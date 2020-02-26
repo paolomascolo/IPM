@@ -11,6 +11,7 @@ import { AllPacketComponent } from './all-packet/all-packet.component';
 import { PacketComponent } from './all-packet/packet/packet.component';
 import { PacketDetailComponent } from './all-packet/packet-detail/packet-detail.component';
 import { EnvironmentListsComponent } from './environment-list/environment-list.component';
+import { OstypeComponent } from './ostype/ostype.component';
 
 /**
  * Modulo dell'admin, qui vengono dichiarate le component che utilizza 
@@ -21,7 +22,7 @@ import { EnvironmentListsComponent } from './environment-list/environment-list.c
  * @see AdminRoutingModule
  */
 @NgModule({
-  declarations: [AdminDashboardComponent, UserDashboardComponent, UsersComponent, WorkInProgressComponent, UserDetailsComponent, AllPacketComponent, PacketComponent, PacketDetailComponent, EnvironmentListsComponent],
+  declarations: [AdminDashboardComponent, UserDashboardComponent, UsersComponent, WorkInProgressComponent, UserDetailsComponent, AllPacketComponent, PacketComponent, PacketDetailComponent, EnvironmentListsComponent, OstypeComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,

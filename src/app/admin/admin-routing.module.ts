@@ -8,6 +8,7 @@ import { WorkInProgressComponent } from './work-in-progress/work-in-progress.com
 import { AllPacketComponent } from './all-packet/all-packet.component';
 import { EnvironmentListsComponent } from './environment-list/environment-list.component';
 import { AuthGuard } from '../../guard/auth/auth.guard';
+import { OstypeComponent } from './ostype/ostype.component';
 
 /**
  * Modulo di routing dell'admin. Qui ci sono i percorsi che un admin può seguire:
@@ -29,7 +30,8 @@ const routes: Routes = [
       { path: 'users', component: UsersComponent },
       { path: 'work-in-progress', component: WorkInProgressComponent },
       { path: 'all-packet', component: AllPacketComponent },
-      { path: 'environments', component: EnvironmentListsComponent }
+      { path: 'environments', component: EnvironmentListsComponent },
+      { path: 'ostype', component: OstypeComponent }
     ]
   }
 ];

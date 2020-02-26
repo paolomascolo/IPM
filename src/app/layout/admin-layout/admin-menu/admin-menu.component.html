@@ -7,18 +7,17 @@ custom e sono definite nel CSS-->
     </div>
   </div>
 </div>
-        <button class="menubtn">
-            <!-- Per navigare tra le component usiamo il routerLink, specificando il persorso da seguire-->
-            <a [routerLink]="['/admin-dashboard']">Dashboard </a>
-        </button>
-    <button class="menubtn">
-        <!-- Per navigare tra le component usiamo il routerLink, specificando il persorso da seguire-->
-        <a [routerLink]="['/admin-dashboard/environments']">
-            <i class="fas fa-folder-open"></i> Environments
-        </a>
+      <button class="menubtn">
+        <a [routerLink]="['/admin-dashboard']">Dashboard </a>
+      </button>
+    <button class="menubtn" [routerLink]="['/admin-dashboard/environments']">
+        <i class="fas fa-folder"></i> Environments
     </button>
     <button class="menubtn" [routerLink]="['/admin-dashboard/all-packet']">
         <i class="fas fa-folder"></i> Packets
+    </button>
+    <button class="menubtn" [routerLink]="['/admin-dashboard/ostype']">
+        <i class="fas fa-folder"></i> Ostype
     </button>
     <button class="menubtn" (click)="logout()">
         <i class="fas fa-sign-out-alt"></i>Logout
