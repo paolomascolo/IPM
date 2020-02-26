@@ -15,10 +15,16 @@
     padding-right: 3vh;
 
     transform: rotate(180deg);
+
+    transition: color 1s;
 }
 
 .up:hover {
     border-color: transparent transparent #000000 transparent;
+}
+
+.up:hover p {
+    color: #ffcc00;
 }
 
 svg:hover {
@@ -43,6 +49,11 @@ svg:hover{
 .roundedCorner {
     border-radius: 25px;
 }
+
+.selected svg {
+    color: white;
+}
+
 
 @media screen and (min-width: 890px) {
     .triangle{

@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, SystemJsNgModuleLoader } from '@angular/core';
 import { LoginDTO } from 'src/dto/logindto';
 import { NgForm } from '@angular/forms';
 import { UserService } from 'src/service/user.service';
 import { Router } from '@angular/router';
+import { UserDTO } from 'src/dto/userdto';
+import { Usertype } from 'src/dto/usertype';
 
 @Component({
   selector: 'app-login',
@@ -12,6 +14,7 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
 
   loginDTO: LoginDTO;
+  userDTO: UserDTO = new UserDTO();
 
   userChoice: string = 'loginUser';
 
@@ -41,7 +44,20 @@ export class LoginComponent implements OnInit {
             this.router.navigate(['/login']);
         }
       }
+
+      else {
+        alert(`Hey ${f.value.username}, you don't exist!`);
+      }
     });
+  }
+
+  register(userDTO: UserDTO) {
+    
+    userDTO.usertype=1;
+    this.userDTO = userDTO;
+    this.service.insert(this.userDTO).toPromise();    // .subscribe(us => us);
+
+    alert(`Thank you for registering, ${userDTO.username}`);
   }
 
   showForm(formToShow: string) {
