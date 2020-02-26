@@ -1,18 +1,27 @@
 * {
-    font-size: 16px;
+    font-size: 12px;
 }
 
 .menu {
-    height: 92vh;
-    width: 100%;
-    background-color: #1e282d;
+    height: 60%;
+    width: 60%;
+    background-color: white;
+    padding-top: 5%;
+}
+
+.center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  max-width: 50%;
 }
 
 .menubtn, .collapsebtn {
     width: 100%;
     text-align: left;
-    background-color: #263238;
-    color: #f1f1f1;
+    background-color: white;
+    color: black;
     border: none;
     padding-left: 20px;
     padding-top: 10px;
@@ -30,11 +39,11 @@ i {
 
 a {
     text-decoration: none;
-    color: white;
+    color: black;
 }
 
 button:focus, button:hover, a:hover {
-    background-color: #334247;
+    background-color: #fff9e3;
     color: darkorange;
     border: none !important;
 }
