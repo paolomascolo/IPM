@@ -1,0 +1,30 @@
+.up {
+    width: 0px;
+    height: 0px;
+    border-style: inset;
+    border-width: 0 12vh 14vh 12vh;
+    border-color: transparent transparent #ffffff transparent;
+    transform: rotate(180deg);
+
+    transition: border-color 1s;
+}
+  
+.up p {
+    width: 10vh;
+    height: 11vh;
+    padding-right: 3vh;
+
+    transform: rotate(180deg);
+}
+
+.up:hover {
+    border-color: transparent transparent #000000 transparent;
+}
+
+svg:hover {
+    color: white;
+}
+
+.selected {
+    color: white;
+}

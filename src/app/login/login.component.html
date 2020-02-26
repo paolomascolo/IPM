@@ -31,15 +31,17 @@
       <img src="../../assets/ipmlogo.svg" alt="ipm logo" class="img-fluid">
     </div>
   </div>
+
   <div class="row">
     <div class="col-md-4 mx-auto text-center">
-      <i class="fas fa-user-plus fa-5x p-4"></i>
-      <i class="fas fa-user fa-5x p-4"></i>
+      <i class="fas fa-user-friends fa-5x p-4"></i>
+      <i class="fas fa-user-circle fa-5x p-4"></i>
       <i class="fab fa-facebook fa-5x p-4"></i>
       <i class="fab fa-google-plus fa-5x p-4"></i>
       <i class="fab fa-instagram fa-5x p-4"></i>
     </div>
   </div>
+
   <!-- Form -->
   <div class="row">
     <div class="col-md-3 mx-auto text-center">
@@ -53,9 +55,11 @@
           <input class="form-control text-center roundedCorner" type="password" id="pass" name="password" placeholder="Password" ngModel>
         </div>
 
-        <button class="" type="submit" (click)="login(f)">Login</button>
-
+        <div class="mx-auto up" type="submit" (click)="login(f)">
+          <p class="col-md-5 text-center">Login</p>
+        </div>
       </form>
     </div>
   </div>
+
 </div>
