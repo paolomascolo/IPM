@@ -11,24 +11,15 @@ custom e sono definite nel CSS-->
             <!-- Per navigare tra le component usiamo il routerLink, specificando il persorso da seguire-->
             <a [routerLink]="['/admin-dashboard']">Dashboard </a>
         </button>
-        <!-- quando si clicca sul bottone la variabile "isAccountCollapsed" cambia valore booleano-->
-        <button class="menubtn" (click)="accountcollapse()">Account</button>
-        <!-- La direttiva *ngIf mostra il contenuto del div solo se "isAccountCollapsed" è true -->
-        <div *ngIf="isAccountCollapsed">
-            <button class="collapsebtn">
-              <a [routerLink]="['/admin-dashboard/work-in-progress']">Edit Profile</a>
-            </button>
-            <button class="collapsebtn">
-              <a [routerLink]="['/admin-dashboard/work-in-progress']">General Info</a>
-            </button>
-        </div>
-        <button class="menubtn" (click)="userscollapse()">Users</button>
-        <div *ngIf="isUserCollapsed">
-            <button class="collapsebtn">
-              <a [routerLink]="['/admin-dashboard/users']">Manage Users</a>
-            </button>
-        </div>
-        <button class="menubtn" [routerLink]="['/admin-dashboard/all-packet']">Packets</button>
-        <button class="menubtn" [routerLink]="['/admin-dashboard/ostype']">OS Types</button>
-        <button class="menubtn" (click)="logout()">Logout</button>
-
+    <button class="menubtn">
+        <!-- Per navigare tra le component usiamo il routerLink, specificando il persorso da seguire-->
+        <a [routerLink]="['/admin-dashboard/environments']">
+            <i class="fas fa-folder-open"></i> Environments
+        </a>
+    </button>
+    <button class="menubtn" [routerLink]="['/admin-dashboard/all-packet']">
+        <i class="fas fa-folder"></i> Packets
+    </button>
+    <button class="menubtn" (click)="logout()">
+        <i class="fas fa-sign-out-alt"></i>Logout
+    </button>
