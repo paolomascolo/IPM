@@ -1,19 +1,49 @@
-<div class="all-packet-container">
-  <ul style="list-style: none; width: 50%;">
-    <li *ngFor="let packet of packets" [class.selected]="packet === selectedPacket" (click)="onSelect(packet)">
-      <app-packet
-        [name]="packet.name"
-        ></app-packet>
-    </li>
-  </ul>
+<table style="margin-top: 10%; width: 200%;">
+  <tr class="text-center">
+    <th></th>
+    <th>Name</th>
+    <th>Description</th>
+    <th>OS</th>
+  </tr>
 
-  <app-packet-detail 
-    *ngIf="selectedPacket"
-    [name]="selectedPacket.name"
-    [description]="selectedPacket.description"
-    [packet]="selectedPacket"
-    style="width: 50%;"
-  >
-  </app-packet-detail>
+  <tr>
+    <td class="text-center" style="border: 1px solid rgb(255, 241, 184)" (click)="delete( dto.id )" style="cursor: pointer;">
+      <a (click)="insert( dto ); clear()"><i class="fas fa-plus blallo" style="font-size: 2rem;"></i> </a>
+    </td>
+    <td class="text-center" style="background-color: rgb(255, 241, 184); border: 1px solid white;">
+      <input placeholder="Click me to set a name!" [(ngModel)]="dto.name" style="border: none; background-color: rgb(255, 241, 184); cursor: pointer; outline: none;" class="text-center">
+    </td>
+    <td class="text-center" style="border: 1px solid rgb(255, 241, 184)">
+      <input placeholder="Click me to set a description!" [(ngModel)]="dto.description" style="border: none; background-color: white; cursor: pointer; outline: none;" class="text-center">
+    </td>
+    <td class="text-center" style="background-color: rgb(255, 241, 184); border: 1px solid white;">
+      <select [(ngModel)]="dto.ostype">
+        <option [ngValue]="null" disabled>Choose your os</option>
+        <option [ngValue]="ost" *ngFor="let ost of ostypes">
+          {{ ost.osTypeName }}
+        </option>
+      </select>
+    </td>
+  </tr>
 
-</div>
+  <tr *ngFor="let dto of dtolist">
+    <td class="text-center" style="border: 1px solid rgb(255, 241, 184)" (click)="delete( dto.id )" style="cursor: pointer;">
+      <a (click)="delete( dto.id )"><i class="fas fa-trash blallo" style="font-size: 2rem;"></i> </a>
+    </td>
+    <td class="text-center" style="background-color: rgb(255, 241, 184); border: 1px solid white;">
+      <input [(ngModel)]="dto.name" (keydown.enter)="update(dto)" style="border: none; background-color: rgb(255, 241, 184); cursor: pointer; outline: none;" class="text-center">
+    </td>
+    <td class="text-center" style="border: 1px solid rgb(255, 241, 184)" >
+      <input [(ngModel)]="dto.description" (keydown.enter)="update(dto)" style="border: none; background-color: white; cursor: pointer; outline: none;" class="text-center">
+    </td>
+    <td id="osTd" class="text-center" style="background-color: rgb(255, 241, 184); border: 1px solid white;" *ngIf="dto.ostype">
+      <p>{{ dto.ostype.osTypeName }}</p>
+      <select class="selectOs" [(ngModel)]="dto.ostype" (change)="update(dto)">
+        <option [ngValue]="ost" *ngFor="let ost of ostypes">
+          {{ ost.osTypeName }}
+        </option>
+      </select>
+    </td>
+  </tr>
+
+</table>

@@ -1,11 +1,45 @@
-.all-packet-container {
+.packet-item {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: flex-start;
+    justify-content: center;
+    align-items: center;
+
+    padding: 2rem;
 }
 
-.all-packet-container-stratch {
-    width: 100%;
+td {
+    padding: 1rem;
+    transition: background-color .5s;
+}
+
+.blallo {
+    color: #FFCC00;
+    transition: color .5s;
+}
+
+td:hover > a > svg {
     color: black;
 }
+
+.selectOs {
+    border: none;
+    background-color: rgb(255, 241, 184);
+    outline: none;
+    cursor: pointer;
+    width: 1rem;
+}
+
+select option {
+    color: black;
+}
+
+#osTd {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
