@@ -7,22 +7,9 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class PacketComponent implements OnInit {
   @Input() name;
-  @Input() description;
-
-  // @Input() selectedPacket: boolean;
 
   constructor() { }
 
   ngOnInit() {
   }
-
-/*  onSelect() {
-    this.selectedPacket = !this.selectedPacket;
-  }
-
-  clearSelect() {
-    this.selectedPacket = false;
-  }
-*/
-
 }

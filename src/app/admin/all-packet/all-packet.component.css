@@ -5,9 +5,7 @@
     justify-content: flex-start;
 }
 
-/* .selected {
-    background-color: #FFCC00;
-    margin: 1rem;
-    border-radius: 25px;
+.all-packet-container-stratch {
+    width: 100%;
+    color: black;
 }
-*/
