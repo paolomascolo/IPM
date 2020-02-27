@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" >
   <div class="row mt-5">
     <div class="col-md-12">
       <table>
@@ -8,6 +8,8 @@
           </th>
           <th>
             Description
+          </th>
+          <th> Packet
           </th>
           <th>
             Edit
@@ -23,40 +25,44 @@
           <td>
             <!-- con il binding bidirezionale [(ngModel)] mentre scriviamo nell'input
             viene modificato l'attributo di dto in tempo reale-->
-            <input placeholder="name" [(ngModel)]="dto.name">
+            <input [(ngModel)]="dto.name" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
           </td>
           <td>
-            <input placeholder="description" [(ngModel)]="dto.description">
+            <input [(ngModel)]="dto.description" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
           </td>
           <td>
+            <select [(ngModel)]="dto.environmentpacket">
+              <option *ngFor="let packet of packets" [ngValue]="packet">{{packet.name}}</option>
+            </select>
           </td>
           <td>
-            <button (click)="insert(dto)"><i class="fas fa-plus"></i>Insert</button>
+            <button (click)="insert(dto)" class="btn btn-warning"><i class="fas fa-plus"></i> Insert</button>
           </td>
           <td>
-            <button (click)="clear()"><i class="fas fa-times"></i>Clear</button>
+            <button (click)="clear()" class="btn btn-warning"><i class="fas fa-times"></i> Clear</button>
           </td>
           <td>
-            <button (click)="close()">Close Details</button>
+            <button (click)="close()" class="btn btn-warning"> Close Details</button>
           </td>
-        </tr>
+        </tr> <br>
         <tr *ngFor="let dto of dtolist">
           <td>
-            <input [(ngModel)]="dto.name">
+            <input [(ngModel)]="dto.name" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
           </td>
           <td>
-            <input [(ngModel)]="dto.description">
+            <input [(ngModel)]="dto.description" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
           </td>
           <td>
+            <input [(ngModel)]="dto.environmentpacket.name" readonly class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
           </td>
           <td>
-            <button (click)=update(dto)><i class="fas fa-edit"></i>Edit</button>
+            <button (click)=update(dto) class="btn btn-warning"><i class="fas fa-edit"></i> Edit</button>
           </td>
           <td>
-            <button (click)="delete(dto.id)"><i class="fas fa-trash"></i>Delete</button>
+            <button (click)="delete(dto.id)" class="btn btn-warning"><i class="fas fa-trash"></i> Delete</button>
           </td>
           <td>
-            <button (click)="select(dto)"><i class="fas fa-binoculars"></i>Details</button>
+            <button (click)="select(dto)" class="btn btn-warning"><i class="fas fa-binoculars"></i> Details</button>
           </td>
         </tr>
       </table>
@@ -69,7 +75,7 @@
     <div class="col-md-10">
       <!-- Se "selected" non è nullo, viene passato il suo valore sotto la chiave dto alla compoment
         figlia. Questo è un esempio di binding unidirezionale tra ts e ts-->
-      <app-user-details *ngIf="selected" [dto]="selected"></app-user-details>
+      <app-environment-details *ngIf="selected" [dto]="selected"></app-environment-details>
     </div>
     <div class="col-md-1">
       <!-- colonna vuota per centrare i dettagli-->

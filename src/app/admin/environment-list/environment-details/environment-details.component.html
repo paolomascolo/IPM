@@ -1,0 +1,41 @@
+<h3>
+  <!-- | uppercase è un pipe, trasforma la stringa mettendo tutte le lettere maiuscole-->
+  {{dto.name | uppercase }}'S DETAILS 
+</h3>
+<table>
+    <tr>
+      <th>
+        ID
+      </th>
+      <th>
+        Name
+      </th>
+      <th>
+        Description
+      </th>
+      <th>
+        Packet
+      </th>
+
+    </tr>
+    <tr>
+      <td>
+        <span>
+          {{dto.id}}
+        </span>
+      </td>
+      <td>
+        <input [(ngModel)]="dto.name" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+      </td>
+      <td>
+        <input [(ngModel)]="dto.description" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+        </td>
+      <td>
+        <select [(ngModel)]="dto.environmentpacket">
+          <option *ngFor="let packet of packets" [ngValue]="packet">{{packet.name}}</option>
+        </select>
+      <td>
+        <button (click)="delete(dto.id)" class="btn btn-warning"><i class="fas fa-trash"></i> Delete</button>
+      </td>
+    </tr>
+  </table>

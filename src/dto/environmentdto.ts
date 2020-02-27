@@ -1,3 +1,5 @@
+import { PacketDTO } from './packetdto';
+
 /**
  * Classe DTO di Environment. DEVE essere uguale (stesso nome classe, stessi attributi e stessi nomi) a
  * quello nel backend. 
@@ -13,7 +15,8 @@ export class EnvironmentDTO {
     name: string;
  
     description: string;
- 
+    
+    environmentpacket: PacketDTO;
  }
  
  

@@ -23,12 +23,13 @@ td{
 
 
 tr:nth-child(even) {
-	background-color: #ffdb99;
+	/*background-color: #ffdf60; */
+	background-color: white
 }
 
 th {
-	background-color: darkorange;
-	color: #ffffff;
+	background-color: white;
+	color: black;
 }
 
 a:hover {
@@ -45,11 +46,11 @@ width: 120px;
 }
 
 input:hover,  input:active, input:focus{
-    border: 2px solid crimson;
+    border: 2px solid #FFCC00;
 }
 
 button:hover{
-    background-color: crimson;
+    background-color :#FFCC00;
 }
 
 i{
