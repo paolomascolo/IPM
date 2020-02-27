@@ -1,24 +1,28 @@
-<!-- Questo template, essendo un monoblocco, non ha bisogno del grid layout. Le classi di stile sono
-custom e sono definite nel CSS-->
-<div class="row">
-  <div class="col-xs-1">
-    <div class="menu">
-      <p><img class=center src="../../../assets/ipmlogo_yellow.png" > </p>
-    </div>
-  </div>
+<div class="col-md-12 mx-auto p-4">
+  <img class="img-fluid" src="../../../assets/ipmlogo_yellow.png" >
 </div>
-    <button class="menubtn" [routerLink]="['/admin-dashboard']">
-      <i class="fas fa-folder"></i> Dashboard
-    </button>
-    <button class="menubtn" [routerLink]="['/admin-dashboard/environments']">
-        <i class="fas fa-folder"></i> Environments
-    </button>
-    <button class="menubtn" [routerLink]="['/admin-dashboard/all-packet']">
-        <i class="fas fa-folder"></i> Packets
-    </button>
-    <button class="menubtn" [routerLink]="['/admin-dashboard/ostype']">
-        <i class="fas fa-folder"></i> Ostype
-    </button>
-    <button class="menubtn" (click)="logout()">
-        <i class="fas fa-sign-out-alt"></i>Logout
-    </button>
+<div class="col-md-12">
+  <button class="btn "[routerLink]="['/admin-dashboard']">
+    Dashboard
+  </button>
+</div>
+<div class="col-md-12">
+  <button class="btn" [routerLink]="['/admin-dashboard/environments']">
+     Environments
+  </button>
+</div>
+<div class="col-md-12">
+  <button class="btn" [routerLink]="['/admin-dashboard/all-packet']">
+    Packets
+  </button>
+</div>
+<div class="col-md-12">
+  <button class="btn" [routerLink]="['/admin-dashboard/ostype']">
+    Ostype
+  </button>
+</div>
+<div class="col-md-12">
+  <button class="btn" (click)="logout()">
+    Logout
+  </button>
+</div>
