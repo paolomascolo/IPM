@@ -13,6 +13,7 @@ import { PacketDetailComponent } from './all-packet/packet-detail/packet-detail.
 import { EnvironmentListsComponent } from './environment-list/environment-list.component';
 import { OstypeComponent } from './ostype/ostype.component';
 import { EnvironmentDetailsComponent } from './environment-list/environment-details/environment-details.component';
+import { FeedbackComponent } from './feedback/feedback.component';
 
 
 /**
@@ -24,7 +25,7 @@ import { EnvironmentDetailsComponent } from './environment-list/environment-deta
  * @see AdminRoutingModule
  */
 @NgModule({
-  declarations: [AdminDashboardComponent, EnvironmentDetailsComponent, UserDashboardComponent, UsersComponent, WorkInProgressComponent, UserDetailsComponent, AllPacketComponent, PacketComponent, PacketDetailComponent, EnvironmentListsComponent, OstypeComponent],
+  declarations: [AdminDashboardComponent, EnvironmentDetailsComponent, UserDashboardComponent, UsersComponent, WorkInProgressComponent, UserDetailsComponent, AllPacketComponent, PacketComponent, PacketDetailComponent, EnvironmentListsComponent, OstypeComponent, FeedbackComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,
