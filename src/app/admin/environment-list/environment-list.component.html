@@ -12,13 +12,10 @@
           <th> Packet
           </th>
           <th>
-            Edit
           </th>
           <th>
-            Delete
           </th>
           <th>
-            Details
           </th>
         </tr>
         <tr>
@@ -36,13 +33,13 @@
             </select>
           </td>
           <td>
-            <button (click)="insert(dto)" class="btn btn-warning"><i class="fas fa-plus"></i> Insert</button>
+            <button (click)="insert(dto)" class="btn btn-primary-outline"><i class="fas fa-plus" ></i></button>
           </td>
           <td>
-            <button (click)="clear()" class="btn btn-warning"><i class="fas fa-times"></i> Clear</button>
+            <button (click)="clear()" class="btn btn-primary-outline"><i class="fas fa-times" ></i></button>
           </td>
           <td>
-            <button (click)="close()" class="btn btn-warning"> Close Details</button>
+            <button (click)="close()" class="btn btn-primary-outline" > Close Details</button>
           </td>
         </tr> <br>
         <tr *ngFor="let dto of dtolist">
@@ -56,13 +53,13 @@
             <input [(ngModel)]="dto.environmentpacket.name" readonly class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
           </td>
           <td>
-            <button (click)=update(dto) class="btn btn-warning"><i class="fas fa-edit"></i> Edit</button>
+            <button (click)=update(dto) class="btn btn-primary-outline" ><i class="fas fa-edit"></i></button>
           </td>
           <td>
-            <button (click)="delete(dto.id)" class="btn btn-warning"><i class="fas fa-trash"></i> Delete</button>
+            <button (click)="delete(dto.id)" class="btn btn-primary-outline"><i class="fas fa-trash" ></i> </button>
           </td>
           <td>
-            <button (click)="select(dto)" class="btn btn-warning"><i class="fas fa-binoculars"></i> Details</button>
+            <button (click)="select(dto)" class="btn btn-primary-outline"><i class="fas fa-search" ></i></button>
           </td>
         </tr>
       </table>

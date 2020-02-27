@@ -2,6 +2,10 @@
   <!-- | uppercase è un pipe, trasforma la stringa mettendo tutte le lettere maiuscole-->
   {{dto.name | uppercase }}'S DETAILS 
 </h3>
+
+<div class="container" >
+  <div class="row mt-5">
+    <div class="col-md-12">
 <table>
     <tr>
       <th>
@@ -16,7 +20,6 @@
       <th>
         Packet
       </th>
-
     </tr>
     <tr>
       <td>
@@ -35,7 +38,6 @@
           <option *ngFor="let packet of packets" [ngValue]="packet">{{packet.name}}</option>
         </select>
       <td>
-        <button (click)="delete(dto.id)" class="btn btn-warning"><i class="fas fa-trash"></i> Delete</button>
+        <button (click)="delete(dto.id)" class="btn btn-primary-outline"><i class="fas fa-trash" ></i></button>
       </td>
-    </tr>
-  </table>
+    </tr></table></div></div></div>
