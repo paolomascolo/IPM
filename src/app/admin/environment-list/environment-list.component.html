@@ -28,7 +28,7 @@
             <input [(ngModel)]="dto.description" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
           </td>
           <td>
-            <select [(ngModel)]="dto.environmentpacket">
+            <select [(ngModel)]="dto.environmentpacket" class="form-control" id="selectCenter">
               <option *ngFor="let packet of packets" [ngValue]="packet">{{packet.name}}</option>
             </select>
           </td>
