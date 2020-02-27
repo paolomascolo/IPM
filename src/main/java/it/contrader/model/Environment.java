@@ -26,9 +26,8 @@ public class Environment {
 	private String name;
 	
 	private String description;
-	
-	/* @JoinColumn(name = "env_packet")
+
 	@OneToOne
-	private Packet environmentpacket; */
+	private Packet environmentpacket; 
 	
 }
