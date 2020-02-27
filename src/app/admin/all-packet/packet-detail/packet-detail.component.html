@@ -1,6 +1,6 @@
 <div class="detail-container">
   <input class="packet-title" [(ngModel)]="packet.name" (keydown)="updateOnEnter($event, packet)">
-  <textarea class="packet-descarea" [(ngModel)]="packet.description" (keydown)="updateOnEnter($event, packet)">
-      
-  </textarea>
+  <textarea class="packet-descarea" [(ngModel)]="packet.description" (keydown)="updateOnEnter($event, packet)"></textarea>
+  <p class="packet-title">Linux Distro</p>
+  <p>{{ packet.ostype.osTypeName }} </p>
 </div>

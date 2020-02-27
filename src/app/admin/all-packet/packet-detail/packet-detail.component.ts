@@ -12,6 +12,7 @@ export class PacketDetailComponent extends AbstractCrudComponent<PacketDTO> impl
 
   @Input() name: string;
   @Input() description: string;
+  @Input() ostype: string;
   @Input() packet: PacketDTO;
 
   constructor(private packetService: PacketService) { 
@@ -23,6 +24,10 @@ export class PacketDetailComponent extends AbstractCrudComponent<PacketDTO> impl
 
   update(packet: PacketDTO) {
     this.packetService.update(packet).subscribe(() => this.getAll());
+  }
+
+  delete(packetId: number) {
+    this.packetService.delete(packetId);
   }
 
   updateOnEnter(event, packet: PacketDTO) {

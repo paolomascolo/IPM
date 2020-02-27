@@ -3,6 +3,8 @@ import { PacketComponent } from './packet/packet.component';
 import { PacketService } from 'src/service/packet.service';
 import { AbstractCrudComponent } from 'src/app/utils/abstractcomponent';
 import { PacketDTO } from 'src/dto/packetdto';
+import { OstypeDTO } from 'src/dto/ostypedto';
+import { OstypeService } from 'src/service/ostypeservice';
 
 
 @Component({
@@ -13,25 +15,23 @@ import { PacketDTO } from 'src/dto/packetdto';
 export class AllPacketComponent extends AbstractCrudComponent<PacketDTO> implements OnInit {
 
   packets: PacketDTO[];
+  ostypes: OstypeDTO[];
 
   selectedPacket: PacketDTO;
 
-  constructor(packetService: PacketService) {
+  constructor(packetService: PacketService, ostypeService: OstypeService) {
     super(packetService);
-    packetService.getAll().subscribe(pac => this.packets = pac );
+    
+    ostypeService.getAll().subscribe(ost => this.ostypes = ost);
    }
 
   ngOnInit() {
     this.clear();
-    this.getAllPackets();
+    this.getAll();
   }
 
   clear() {
     this.dto = new PacketDTO;
-  }
-
-  getAllPackets() {
-    return this.packets;
   }
 
   onSelect(packet: PacketDTO) {

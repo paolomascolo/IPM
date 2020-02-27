@@ -7,7 +7,8 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class PacketComponent implements OnInit {
   @Input() name;
-
+  @Input() description;
+  
   constructor() { }
 
   ngOnInit() {
