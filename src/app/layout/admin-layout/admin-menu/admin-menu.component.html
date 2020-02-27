@@ -2,27 +2,32 @@
   <img class="img-fluid" src="../../../assets/ipmlogo_yellow.png" >
 </div>
 <div class="col-md-12">
-  <button class="btn "[routerLink]="['/admin-dashboard']">
+  <button class="btn btn-block"[routerLink]="['/admin-dashboard']">
     Dashboard
   </button>
 </div>
 <div class="col-md-12">
-  <button class="btn" [routerLink]="['/admin-dashboard/environments']">
+  <button class="btn btn-block" [routerLink]="['/admin-dashboard/environments']">
      Environments
   </button>
 </div>
 <div class="col-md-12">
-  <button class="btn" [routerLink]="['/admin-dashboard/all-packet']">
+  <button class="btn btn-block" [routerLink]="['/admin-dashboard/all-packet']">
     Packets
   </button>
 </div>
 <div class="col-md-12">
-  <button class="btn" [routerLink]="['/admin-dashboard/ostype']">
+  <button class="btn btn-block" [routerLink]="['/admin-dashboard/ostype']">
     Ostype
   </button>
 </div>
 <div class="col-md-12">
-  <button class="btn" (click)="logout()">
+  <button class="btn btn-block" [routerLink]="['/admin-dashboard/feedback']">
+    Feedbacks
+  </button>
+</div>
+<div class="col-md-12">
+  <button class="btn btn-block" (click)="logout()">
     Logout
   </button>
 </div>

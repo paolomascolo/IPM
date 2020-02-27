@@ -1,0 +1,7 @@
+<div>
+  <input type="text" class="" placeholder="Title" [(ngModel)]="title">
+  <input type="text" class="" placeholder="Feedback" [(ngModel)]="feedback">
+  <input type="text" class="" placeholder="Vote 1-5" [ngModel]="vote" (change)="setVote($event)">
+
+  <button class="btn" (click)="addPost()">Submit</button>
+</div>

@@ -1,1 +1,9 @@
+:hover{
+  background-color: #fff9e3;
+  color: #FFCC00;
+}
 
+.btn.active{
+  background-color: #fff9e3;
+  color: #FFCC00;
+}

@@ -10,6 +10,8 @@ import { EnvironmentListsComponent } from './environment-list/environment-list.c
 import { AuthGuard } from '../../guard/auth/auth.guard';
 import { OstypeComponent } from './ostype/ostype.component';
 import { FeedbackComponent } from './feedback/feedback.component';
+import { PostComponent } from './feedback/post/post.component';
+import { PostFormComponent } from './feedback/post-form/post-form.component';
 
 /**
  * Modulo di routing dell'admin. Qui ci sono i percorsi che un admin può seguire:
@@ -33,7 +35,9 @@ const routes: Routes = [
       { path: 'all-packet', component: AllPacketComponent },
       { path: 'environments', component: EnvironmentListsComponent },
       { path: 'ostype', component: OstypeComponent },
-      { path: 'feedback', component: FeedbackComponent }
+      { path: 'feedback', component: FeedbackComponent },
+      { path: 'feedback/post', component: PostComponent },
+      { path: 'feedback/post-form', component: PostFormComponent}
     ]
   }
 ];
