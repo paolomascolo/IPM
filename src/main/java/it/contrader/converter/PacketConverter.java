@@ -13,7 +13,7 @@ public class PacketConverter extends AbstractConverter<Packet, PacketDTO> {
 	public Packet toEntity(PacketDTO packetDTO) {
 		Packet packet = null;
 		if (packetDTO != null) {
-			packet = new Packet(packetDTO.getId(), packetDTO.getName(), packetDTO.getDescription());			
+			packet = new Packet(packetDTO.getId(), packetDTO.getName(), packetDTO.getDescription(), packetDTO.getOstype());			
 		}
 		return packet;
 	}
@@ -22,7 +22,7 @@ public class PacketConverter extends AbstractConverter<Packet, PacketDTO> {
 	public PacketDTO toDTO(Packet packet) {
 		PacketDTO packetDTO = null;
 		if (packet != null) {
-			packetDTO = new PacketDTO (packet.getId(), packet.getName(), packet.getDescription() );
+			packetDTO = new PacketDTO (packet.getId(), packet.getName(), packet.getDescription(), packet.getOstype() );
 			
 		}
 		return packetDTO;

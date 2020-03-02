@@ -26,4 +26,7 @@ public class Packet {
 	
 	private String description;
 	
+	@ManyToOne
+	private OsType ostype;
+	
 }
