@@ -5,8 +5,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -14,20 +12,18 @@ import lombok.NoArgsConstructor;
 
 @Data
 @Entity
-@NoArgsConstructor
 @AllArgsConstructor
-public class Environment {
+@NoArgsConstructor
+public class Feedback {
 	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private long id;
 	
-	@Column(unique = true)
-	private String name;
-	
-	private String description;
-
-	@ManyToOne
-	private Packet environmentpacket; 
+	@Column(unique=true)
+	private int vote;
+	private String title;
+	private String feedback;
 	
 }
