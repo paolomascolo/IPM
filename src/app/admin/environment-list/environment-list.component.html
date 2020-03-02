@@ -17,6 +17,8 @@
           </th>
           <th>
           </th>
+          <th>
+          </th>
         </tr>
         <tr>
           <td>
@@ -60,6 +62,9 @@
           </td>
           <td>
             <button (click)="select(dto)" class="btn btn-primary-outline"><i class="fas fa-search" ></i></button>
+          </td>
+          <td>
+            <a (click)="downloadThis(dto)" [href]="fileUrl" download="{{ dto.name }}.txt" class="btn btn-primary-outline"><i class="fas fa-arrow-circle-down"></i></a>
           </td>
         </tr>
       </table>

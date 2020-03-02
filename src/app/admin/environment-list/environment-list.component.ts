@@ -4,6 +4,7 @@ import { PacketService } from 'src/service/packet.service';
 import { EnvironmentDTO } from 'src/dto/environmentdto';
 import { AbstractCrudComponent } from 'src/app/utils/abstractcomponent';
 import { PacketDTO } from 'src/dto/packetdto';
+import { DomSanitizer } from '@angular/platform-browser';
 
 /**
  * Come ogni componente di CRUD, questa estende la classe AbstractCrudComponent, ereditando tutti i metodi 
@@ -23,9 +24,10 @@ import { PacketDTO } from 'src/dto/packetdto';
 export class EnvironmentListsComponent extends AbstractCrudComponent<EnvironmentDTO> implements OnInit {
   packets: PacketDTO[];
   servicep: PacketService;
+  fileUrl;
 
 
-  constructor(service: EnvironmentService, servicep: PacketService) {
+  constructor(service: EnvironmentService, servicep: PacketService, private sanitizer: DomSanitizer) {
     super(service);
     servicep.getAll().subscribe(packet => this.packets = packet);
   }
@@ -42,4 +44,11 @@ export class EnvironmentListsComponent extends AbstractCrudComponent<Environment
   close() {
     this.selected = null;
   }
+
+  downloadThis(downloadDto: EnvironmentDTO) {
+    const data = '#!/bin/sh\nsudo ' + downloadDto.environmentpacket.ostype.command + ' ' + downloadDto.environmentpacket.name;
+    const blob = new Blob([data], { type: 'application/octet-stream' });
+
+    this.fileUrl = this.sanitizer.bypassSecurityTrustResourceUrl(window.URL.createObjectURL(blob));
+  } 
 }
