@@ -15,9 +15,6 @@
           <th>
             Delete
           </th>
-          <th>
-            Details
-          </th>
         </tr>
         <tr>
         <td>
@@ -31,9 +28,6 @@
         </td>
         <td>
           <button (click)="clear()"><i class="fas fa-times"></i>Clear</button>
-        </td>
-        <td>
-          <button (click)="close()">Close Details</button>
         </td>
       </tr>
       <tr *ngFor="let dto of dtolist">
@@ -49,31 +43,14 @@
         <td>
           <button (click)="delete(dto.id)"><i class="fas fa-trash"></i>Delete</button>
         </td>
-        <td>
-          <button (click)="select(dto)"><i class="fas fa-binoculars"></i>Details</button>
-        </td>
       </tr>
     </table>
   </div>
 </div>
-<div class="row mt-5">
-  <div class="col-md-1">
-    <!-- colonna vuota per centrare i dettagli-->
-  </div>
-  <div class="col-md-10">
-    <!-- Se "selected" non è nullo, viene passato il suo valore sotto la chiave dto alla compoment
-      figlia. Questo è un esempio di binding unidirezionale tra ts e ts-->
-    <app-user-details *ngIf="selected" [dto]="selected"></app-user-details>
-  </div>
-  <div class="col-md-1">
-    <!-- colonna vuota per centrare i dettagli-->
-  </div>
-</div>
-</div>
 
-<h2>OS Types</h2>
+<div class = "mt-5"><h2> OS Types</h2></div>
 
-<div class=osbox class="col-md-4">
+<div class=osbox class="col-md-12">
     <div class="divbox" *ngFor="let os of dtolist">
       <h4>
         <a [title]="os.osTypeName + ' command'">
@@ -86,7 +63,7 @@
       </p>
 
       <button (click)="share()">
-        Share
+        <i class="fas fa-plus-circle"></i>
       </button>
     </div>
 </div>
