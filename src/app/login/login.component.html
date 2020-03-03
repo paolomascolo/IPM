@@ -21,11 +21,11 @@
       <form #f="ngForm">
 
         <div class="form-group">
-          <input class="form-control text-center roundedCorner" type="text" id="user" name="username" placeholder="Username" ngModel>
+          <input style="background: transparent;" class="form-control text-center roundedCorner" type="text" id="user" name="username" placeholder="Username" ngModel>
         </div>
 
         <div class="form-group">
-          <input class="form-control text-center roundedCorner" type="password" id="pass" name="password" placeholder="Password" ngModel (keydown.enter)="login(f)">
+          <input style="background: transparent;" class="form-control text-center roundedCorner" type="password" id="pass" name="password" placeholder="Password" ngModel (keydown.enter)="login(f)">
         </div>
 
         <div class="mx-auto up" type="submit" (click)="login(f)">

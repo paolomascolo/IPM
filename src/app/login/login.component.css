@@ -1,3 +1,13 @@
+.form-control::-moz-placeholder {
+    color: white;
+  }
+  .form-control:-ms-input-placeholder {
+    color: white;
+  }
+  .form-control::-webkit-input-placeholder {
+    color: white;
+  }
+
 .up {
     width: 0px;
     height: 0px;
