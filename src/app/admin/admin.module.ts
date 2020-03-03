@@ -16,6 +16,8 @@ import { EnvironmentDetailsComponent } from './environment-list/environment-deta
 import { FeedbackComponent } from './feedback/feedback.component';
 import { PostComponent } from './feedback/post/post.component';
 import { PostFormComponent } from './feedback/post-form/post-form.component';
+import { CategoryComponent } from './category/category.component';
+import { CategoryDetailsComponent } from './category/category-details/category-details.component';
 
 
 /**
@@ -27,7 +29,22 @@ import { PostFormComponent } from './feedback/post-form/post-form.component';
  * @see AdminRoutingModule
  */
 @NgModule({
-  declarations: [AdminDashboardComponent, EnvironmentDetailsComponent, UserDashboardComponent, UsersComponent, WorkInProgressComponent, UserDetailsComponent, AllPacketComponent, PacketComponent, PacketDetailComponent, EnvironmentListsComponent, OstypeComponent, FeedbackComponent, PostComponent, PostFormComponent],
+  declarations: [AdminDashboardComponent,
+    EnvironmentDetailsComponent,
+    UserDashboardComponent,
+    UsersComponent,
+    WorkInProgressComponent,
+    UserDetailsComponent,
+    AllPacketComponent,
+    PacketComponent,
+    PacketDetailComponent,
+    EnvironmentListsComponent,
+    OstypeComponent,
+    FeedbackComponent,
+    PostComponent,
+    PostFormComponent,
+    CategoryComponent,
+    CategoryDetailsComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,

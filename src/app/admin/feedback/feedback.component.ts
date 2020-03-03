@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { AbstractCrudComponent } from 'src/app/utils/abstractcomponent';
 import { FeedbackService } from 'src/service/feedbackservice';
-import { SearchService } from 'src/app/service/search.service';
 import { FeedbackDTO } from 'src/dto/feedbackdto';
+import { SearchService } from 'src/app/service/search.service';
+import { AbstractCrudComponent } from 'src/app/utils/abstractcomponent';
+
 
 export interface Post {
   title: string

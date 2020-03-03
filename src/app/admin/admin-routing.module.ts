@@ -12,6 +12,7 @@ import { OstypeComponent } from './ostype/ostype.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { PostComponent } from './feedback/post/post.component';
 import { PostFormComponent } from './feedback/post-form/post-form.component';
+import { CategoryComponent } from './category/category.component';
 
 /**
  * Modulo di routing dell'admin. Qui ci sono i percorsi che un admin può seguire:
@@ -37,7 +38,8 @@ const routes: Routes = [
       { path: 'ostype', component: OstypeComponent },
       { path: 'feedback', component: FeedbackComponent },
       { path: 'feedback/post', component: PostComponent },
-      { path: 'feedback/post-form', component: PostFormComponent}
+      { path: 'feedback/post-form', component: PostFormComponent},
+      { path: 'category', component: CategoryComponent }
     ]
   }
 ];
